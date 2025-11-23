@@ -1,0 +1,157 @@
+<?php
+ob_start(); // Start output buffering
+
+include 'components/connect.php';
+
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+   $user_id = $_SESSION['user_id'];
+} else {
+   $user_id = '';
+   header('location:index.php');
+   exit(); // Make sure to exit after a header redirect
+}
+
+if (isset($_POST['delete'])) {
+   $cart_id = $_POST['cart_id'];
+   $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE id = ?");
+   $delete_cart_item->execute([$cart_id]);
+   $message[] = 'Cart item deleted!';
+}
+
+if (isset($_POST['delete_all'])) {
+   $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
+   $delete_cart_item->execute([$user_id]);
+   $message[] = 'Deleted all from cart!';
+}
+
+if (isset($_POST['update_qty'])) {
+    $cart_id = $_POST['cart_id'];
+    $qty = $_POST['qty'];
+
+    // Fetch available stock for the product
+    $select_cart_item = $conn->prepare("SELECT pid FROM `cart` WHERE id = ?");
+    $select_cart_item->execute([$cart_id]);
+    $cart_item = $select_cart_item->fetch(PDO::FETCH_ASSOC);
+    
+    if ($cart_item) {
+        $product_id = $cart_item['pid'];
+        $select_product = $conn->prepare("SELECT quantity FROM `products` WHERE id = ?");
+        $select_product->execute([$product_id]);
+        $product = $select_product->fetch(PDO::FETCH_ASSOC);
+        $available_quantity = $product ? (int)$product['quantity'] : 0; // Get available stock
+
+        // Check if the button pressed was 'minus' or 'plus'
+        if ($_POST['update_qty'] === 'minus') {
+            // Decrease quantity but ensure it doesn't go below 1
+            $qty = max(1, $qty - 1);
+        } elseif ($_POST['update_qty'] === 'plus') {
+            // Increase quantity but ensure it doesn't exceed available stock
+            $qty = min($available_quantity, $qty + 1); // Ensure it doesn't exceed available stock
+        }
+
+        // Ensure qty is within bounds
+        if ($qty > $available_quantity) {
+            $qty = $available_quantity; // Set to available quantity if exceeds
+        }
+
+        $qty = filter_var($qty, FILTER_SANITIZE_STRING);
+        $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
+        $update_qty->execute([$qty, $cart_id]);
+        $message[] = 'Cart quantity updated';
+    }
+}
+$grand_total = 0;
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cart</title>
+
+   <!-- Font Awesome CDN Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- Custom CSS File Link -->
+   <link rel="stylesheet" href="user_css/index.css">
+   <link rel="stylesheet" href="user_css/cart.css">
+</head>
+
+<body>
+
+   <!-- Header Section Starts -->
+   <?php include 'components/header.php'; ?>
+   <!-- Header Section Ends -->
+
+   <!-- Shopping Cart Section Starts -->
+   <section class="products cartStyle">
+       <h1 class="title">Your Cart</h1>
+       <div class="box-container">
+
+           <?php
+           $grand_total = 0;
+           $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+           $select_cart->execute([$user_id]);
+           if ($select_cart->rowCount() > 0) {
+               while ($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)) {
+                   // Fetch available stock for the product
+                   $product_id = $fetch_cart['pid']; // Assuming you have a product_id in the cart
+                   $select_product = $conn->prepare("SELECT quantity FROM `products` WHERE id = ?");
+                   $select_product->execute([$product_id]);
+                   $product = $select_product->fetch(PDO::FETCH_ASSOC);
+                   $available_quantity = $product ? (int)$product['quantity'] : 0; // Get available stock
+           ?>
+<form action="" method="post" class="box">
+    <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
+    <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="<?= htmlspecialchars($fetch_cart['name']); ?>">
+    <div class="name" id="Name"><?= htmlspecialchars($fetch_cart['name']); ?></div>
+    <div class="details">
+        <div class="flex">
+            <div class="price"><span>₱</span><?= number_format($fetch_cart['price'], 2);
+                        ?></div>
+                        <button type="submit" name="update_qty" value="minus" aria-label="Decrease Quantity">−</button>
+                        <input type="number" name="qty" class="qty" min="1" max="<?= $available_quantity; ?>" value="<?= $fetch_cart['quantity']; ?>" maxlength="2">
+                        <button type="submit" name="update_qty" value="plus" aria-label="Increase Quantity">+</button>
+                        <button type="submit" class="btn" name="delete" onclick="return confirm('Delete this item?');" aria-label="Delete Item">REMOVE</button>
+                    </div>
+                    <div class="sub-total">SUB Total of <span>PHP: <?= number_format($sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']), 2); ?></span></div>
+                    <div class="available-stock">Available Stock: <span><?= $available_quantity; ?></span></div> <!-- Display available stock -->
+                </div>
+            </form>
+                       <?php
+                               $grand_total += $sub_total;
+                           }
+                       } else {
+                           echo '<p class="empty">Your cart is empty</p>';
+                       }
+                       ?>
+            
+                   </div>
+            
+                   <div class="cart-total">
+                       <p>Cart Total: <span>PHP <?= number_format($grand_total, 2); ?></span></p>
+                       <a href="checkout.php" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>">Checkout</a>
+                   </div>
+            
+                   <div class="more-btn">
+                       <form action="" method="post">
+                           <button type="submit" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>" name="delete_all" onclick="return confirm('Delete all from cart?');" aria-label="Delete All Items">RESET CART</button>
+                       </form>
+                       <a href="product.php" class="btn">Want to Add More?</a>
+                   </div>
+               </section>
+            
+            
+            </body>
+            </html>
+            
+            <?php
+            ob_end_flush();
