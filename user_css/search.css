@@ -1,0 +1,105 @@
+/* search.css */
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Search form styles */
+.search-form {
+    background-color: #ff6600; /* Orange background */
+    padding: 20px;
+    text-align: center;
+}
+
+.search-form .box {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-form button {
+    background-color: #333; /* Black button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #ff6600; /* Change to orange on hover */
+}
+
+/* Product section styles */
+.products {
+    padding: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: #fff; /* White background for product boxes */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(25% - 20px); /* Responsive product box width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #ff6600; /* Orange price text */
+}
+
+.qty {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Empty message styles */
+.empty {
+    text-align: center;
+    color: #ff6600; /* Orange color for empty message */
+    font-size: 1.5em;
+}
+
+/* Category link styles */
+.cat {
+    display: block;
+    margin: 10px 0;
+    color: #ff6600; /* Orange category link */
+    text-decoration: none;
+}
+
+.cat:hover {
+    text-decoration: underline; /* Underline on hover */
+}

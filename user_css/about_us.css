@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* About Us Section */
+#about-us {
+    background-color: #ffebcc; /* Light orange background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffebcc;
+}
+
+/* Headings */
+h2 {
+    font-size: 2em;
+    color: #ff7f00; /* Bright orange */
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ff7f00; /* Bright orange */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Strong Text */
+strong {
+    color: #ff7f00; /* Bright orange */
+}
+
+/* Links */
+a {
+    color: #ff7f00; /* Bright orange */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles (if needed) */
+.button {
+    background-color: #ff7f00; /* Bright orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff5e00; /* Darker orange on hover */
+}

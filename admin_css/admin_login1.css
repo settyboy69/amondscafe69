@@ -1,0 +1,153 @@
+/* admin_login.css — Casual Cozy Design */
+
+/* Reset and Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f3ee; /* Soft cream background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Box */
+.box {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fffaf5; /* Gentle warm white */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15); /* Soft mocha shadow */
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #8b4513; /* Mocha brown */
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(240, 180, 120, 0.2);
+}
+
+/* Form Fields */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: #6b3e1f;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #d8b89a;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fff8f3;
+  color: #5a2d0c;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #ff914d; /* Light orange highlight */
+  box-shadow: 0 0 8px rgba(255, 145, 77, 0.4);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 145, 77, 0.3);
+}
+
+.button:hover {
+  background-color: #ff7a26;
+  box-shadow: 0 6px 15px rgba(255, 122, 38, 0.4);
+}
+
+/* Message Box */
+.message {
+  background-color: #fff0f0;
+  color: #a33c3c;
+  padding: 12px;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 14px;
+}
+
+.message i {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  color: #a33c3c;
+  transition: 0.3s;
+}
+
+.message i:hover {
+  color: #ff7a26;
+}
+
+/* Paragraph and Links */
+p {
+  color: #6b3e1f;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+p a {
+  color: #ff7a26;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+p a:hover {
+  color: #ff914d;
+  text-shadow: 0 0 6px rgba(255, 145, 77, 0.4);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .box {
+    padding: 30px 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}

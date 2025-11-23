@@ -1,0 +1,62 @@
+.hero {
+    position: relative; /* Add an absolute position to the hero section */
+    top: 0; /* Position the hero section at the top of the page */
+    left: 0; /* Position the hero section at the left of the page */
+    width: 100%; /* Set the hero section width to 100% of the page */
+    height: 79vh; /* Set the hero section height to 100% of the viewport height */
+  }
+
+  .hero video {
+    position: absolute; /* Add an absolute position to the video */
+    top: 0; /* Position the video at the top of the hero section */
+    left: 0; /* Position the video at the left of the hero section */
+    width: 100%; /* Set the video width to 100% of the hero section */
+    height: 100%; /* Set the video height to 100% of the hero section */
+    object-fit: cover; /* Make the video cover the entire hero section */
+    z-index: -1;
+  }
+
+
+
+  .hero-content {
+    position: relative; /* Add an absolute position to the hero content */
+    top: 45%; /* Position the hero content at 50% of the hero section's height */
+    left: 50%; /* Position the hero content at 50% of the hero section's width */
+    transform: translate(-50%, -50%); /* Center the hero content horizontally and vertically */
+    text-align: center; /* Center the hero content horizontally */
+    color: #000; /* Set the text color to a dark gray (almost black) */
+  }
+  #orderNow{
+    z-index: 2;
+  }
+
+
+  .hero-content h1 {
+    font-size: 50px; /* Increase the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 10px; /* Add some margin below the heading */
+    color: #FF8C00; /* Set the heading color to a vibrant orange */
+    text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000; /* Add a black outline to the heading */
+  }
+
+  .hero-content p {
+    font-size: 21px; /* Increase the font size of the paragraph */
+    margin-bottom: 20px; /* Add some margin below the paragraph */
+    color: #fefefe;
+  }
+
+  .hero-content a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White color */
+    background-color: #d69f6a; /* Orange color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.hero-content a:hover {
+    background-color: #ff9900; /* Change background color on hover */
+    color: #fff; /* White color */
+    cursor: pointer;
+}

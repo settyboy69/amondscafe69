@@ -1,0 +1,78 @@
+/* Eerie Horror Menu Redesign */
+.menu-container {
+   display: flex;
+   margin: 20px;
+   gap: 20px;
+ 
+   padding: 30px;
+   border-radius: 12px;
+   box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.menu-selection-container {
+   position: sticky;
+   top: 20px;
+   height: fit-content;
+   background: rgba(20, 20, 20, 0.9);
+   padding: 20px;
+   border-radius: 10px;
+   border: 2px solid #550000; /* Deep blood border */
+   box-shadow: 0 0 20px rgba(139, 0, 0, 0.4), inset 0 0 10px rgba(255, 0, 0, 0.1);
+   backdrop-filter: blur(4px);
+   transition: all 0.3s ease;
+}
+
+.menu-selection-container:hover {
+   box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), inset 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.menu-section-container {
+   flex: 4;
+}
+
+.menu-selection {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.menu-selection li {
+   margin-bottom: 15px;
+}
+
+.menu-selection a {
+   text-decoration: none;
+   color: #f5f5f5;
+   font-weight: 600;
+   font-size: 1.1em;
+   display: block;
+   padding: 12px 15px;
+   border-radius: 6px;
+   transition: all 0.4s ease;
+   background: linear-gradient(90deg, #2b0000 0%, #1a0000 100%);
+   letter-spacing: 1px;
+   text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+   border-left: 3px solid transparent;
+}
+
+.menu-selection a:hover {
+   background: linear-gradient(90deg, #3b0000 0%, #1a0000 100%);
+   color: #ff4c4c;
+   border-left: 3px solid #ff0000;
+   transform: translateX(8px);
+   text-shadow: 0 0 8px #ff0000, 0 0 15px #ff4c4c;
+}
+
+/* Optional eerie glow animation */
+@keyframes flicker {
+   0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 0 0 4px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff0000;
+   }
+   20%, 24%, 55% {
+      text-shadow: none;
+   }
+}
+
+.menu-selection a:hover {
+   animation: flicker 1.5s infinite alternate;
+}

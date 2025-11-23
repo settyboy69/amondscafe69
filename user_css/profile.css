@@ -1,0 +1,65 @@
+.user{
+    background-color: #FFEBCC;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+
+
+
+.user-details {
+    max-width: 600px; /* Set a max width for the user details section */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 20px; /* Add some padding */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    text-transform: capitalize;
+}
+
+.user {
+    text-align: left; /* Align text to the left */
+}
+
+.user h3 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #964b00; /* Heading color */
+    font-size: 28px;
+}
+
+.user p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+}
+
+.user p i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #ff7f50; /* Icon color */
+}
+
+.user .address {
+    font-style: italic; /* Italicize the address text */
+}
+
+.user .btnn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #edce67;
+    color: #101010;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.user .btnn:hover {
+    background-color: #e76a4a; /* Darker shade on hover */
+    color: #fefefe;
+}

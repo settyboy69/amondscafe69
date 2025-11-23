@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    background-color: white; /* White background for the header */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Left Navigation */
+.left-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.left-nav li {
+    position: relative; /* Required for dropdown */
+    margin-right: 20px; /* Space between menu items */
+}
+
+.left-nav a {
+    text-decoration: none;
+    color: #FF8C00; /* Orange color */
+    font-weight: bold;
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: color 0.3s;
+}
+
+.left-nav a:hover {
+    color: #FF9900; /* Lighter orange on hover */
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white; /* White background for dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu-toggle:hover .menu-dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.menu-dropdown li {
+    margin: 0; /* Reset margin */
+}
+
+.menu-dropdown a {
+    padding: 10px 15px; /* Padding for dropdown items */
+    color: #333; /* Dark text color for dropdown */
+    text-decoration: none;
+}
+
+.menu-dropdown a:hover {
+    background-color: #FF8C00; /* Highlight on hover */
+    color: white; /* White text on hover */
+}
+
+/* Right Navigation */
+.right-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: #FF8C00; /* Orange color */
+    margin-left: 20px; /* Space between items */
+    font-weight: bold;
+}
+
+.right-nav a:hover {
+    color: #FF9900; /* Lighter orange on hover */
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .name {
+    color: #333; /* Dark text color for profile name */
+    font-weight: bold;
+    margin-right: 20px; /* Space between name and buttons */
+}
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    background-color: #712b12; /* Yellow button */
+    color: white !important; /* Black text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px; /* Space between buttons */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff7f50; /* Darker orange on hover */
+    color: white; /* White text on hover */
+}
+
+/* Message Styles */
+.message {
+    background-color: #FFD95A; /* Yellow background for messages */
+    color: black; /* Black text */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message i {
+    cursor: pointer; /* Pointer cursor for close icon */
+    color: black; /* Black color for close icon */
+}
+
+/* Logo Styles */
+.logo {
+    display: flex; /* Center the logo */
+    align-items: center; /* Vertically center the logo */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.logo img {
+    width: 40px; /* Set the width */
+    height: 40px; /* Set the height */
+}
+
+/* Hover Effect */
+.logo:hover {
+    transform: scale(1.1); /* Increase scale to 110% on hover */
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+    position: relative; /* Required for dropdown positioning */
+}
+
+.menu-toggle a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #FF8C00; /* Orange color for the menu item */
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+/* Hover Effect for Menu Toggle */
+.menu-toggle a:hover {
+    font-size: 1em; /* Increase font size on hover */
+}
+
+/* Dropdown Menu Styles */
+.menu-dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it relative to the menu toggle */
+    background-color: white; /* White background for dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Show dropdown on hover */
+.menu-toggle:hover .menu-dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown Items */
+.menu-dropdown li {
+    list-style: none; /* Remove bullet points */
+}
+
+.menu-dropdown a {
+    text-decoration: none; /* Remove underline from dropdown links */
+    color: #333; /* Dark text color for dropdown items */
+    padding: 10px 15px; /* Padding for dropdown items */
+    display: block; /* Make dropdown items block level for easier clicking */
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+/* Hover Effect for Dropdown Items */
+.menu-dropdown a:hover {
+    font-size: 1.1em; /* Increase font size on hover */
+    background-color: #FF8C00; /* Change background color on hover */
+    color: white; /* Change text color to white on hover */
+}

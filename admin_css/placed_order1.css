@@ -1,0 +1,183 @@
+/* 🌿 Casual Admin Orders Page Design */
+
+/* Reset */
+body, h1, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif; /* Clean, casual font */
+  background-color: #fdf8f4; /* Soft cream background */
+  color: #4b3b35; /* Warm mocha text */
+  line-height: 1.6;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 30px 0;
+  color: #ff8c5a; /* Soft orange */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Orders Section */
+.placed-orders {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.placed-orders:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+.table_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table_header p {
+  font-size: 1.3rem;
+  color: #6f4c3e; /* Mocha */
+  font-weight: 500;
+}
+
+/* Input & Button */
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #dcb8a3;
+  border-radius: 8px;
+  background-color: #fffaf8;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #ff8c5a;
+  outline: none;
+}
+
+button.add_new {
+  background-color: #ff8c5a;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.add_new:hover {
+  background-color: #e67a4c;
+  transform: translateY(-2px);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #6f4c3e; /* Mocha header */
+  color: #fff;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background-color: #fdf4ef; /* Light alternate rows */
+}
+
+.table tr:hover {
+  background-color: #fff3e9; /* Soft orange tint on hover */
+}
+
+/* Dropdown */
+.drop-down {
+  padding: 10px;
+  border: 1px solid #dcb8a3;
+  border-radius: 8px;
+  background-color: #fffaf8;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.drop-down:focus {
+  border-color: #ff8c5a;
+  outline: none;
+}
+
+/* Flex Buttons */
+.flex-btn {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Submit Button */
+input[type="submit"].btn {
+  background-color: #6f4c3e;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"].btn:hover {
+  background-color: #5a3b31;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #e03a3a;
+  transform: translateY(-2px);
+}
+
+/* Empty Message */
+.empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6f4c3e;
+  background-color: #fffaf8;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  font-weight: 500;
+}

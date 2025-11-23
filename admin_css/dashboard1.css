@@ -1,0 +1,172 @@
+/* ==============================================
+   CASUAL COFFEE-THEMED DASHBOARD DESIGN ☕
+   ============================================== */
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f3ee; /* Soft cream background */
+  color: #4b2e20; /* Deep mocha text */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #8b5e3c, #a47148); /* Warm mocha gradient */
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 8px 0 0;
+  font-size: 1.1em;
+  color: #f8e6d2; /* Light cream accent */
+}
+
+/* Navigation */
+nav {
+  margin: 25px 0;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #6b3e1f;
+  background-color: #fffaf5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 1.5px solid #d6b69c;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(139, 69, 19, 0.1);
+}
+
+.navigation a:hover {
+  background-color: #ff914d;
+  color: #fff;
+  border-color: #ff914d;
+  box-shadow: 0 4px 12px rgba(255, 145, 77, 0.3);
+}
+
+/* Dashboard Boxes */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.box {
+  background-color: #fffaf5;
+  border: 1.5px solid #e0c2a2;
+  border-radius: 15px;
+  padding: 25px;
+  flex: 1 1 calc(25% - 25px);
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(139, 69, 19, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(255, 145, 77, 0.25);
+}
+
+/* Dashboard Numbers */
+.numbers {
+  font-size: 2.2em;
+  color: #ff914d; /* Cozy orange highlight */
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.boxName, .count {
+  font-size: 1.1em;
+  color: #6b3e1f;
+}
+
+/* Links inside boxes */
+.link {
+  margin-top: 15px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #8b5e3c;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link a:hover {
+  color: #ff914d;
+}
+
+/* Message Box */
+.message {
+  background-color: #fff3cd; /* Light creamy yellow */
+  color: #5c3b1b;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #ff914d;
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+}
+
+.message button {
+  background: none;
+  border: none;
+  color: #8b5e3c;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.message button:hover {
+  color: #ff914d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}

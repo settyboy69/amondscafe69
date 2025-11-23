@@ -1,0 +1,116 @@
+/* Reset some default styles */
+body, h1, p, input, select, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Light background */
+    color: #3c2a1f; /* Mocha color for text */
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #d76d24; /* Orange color for headings */
+}
+
+/* Update product section */
+.update-product {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #d76d24; /* Orange border */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3c2a1f; /* Mocha border on focus */
+    outline: none;
+}
+
+/* Label styles */
+span {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #3c2a1f; /* Mocha color for labels */
+}
+
+/* Image styles */
+img {
+    max-width: 100%; /* This keeps the image responsive */
+    width: 200px; /* Adjust this value to make the image smaller */
+    border: 2px solid orange; /* Adds an orange border */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block; /* Make the image a block element */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+}
+
+/* Button styles */
+.flex-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="submit"].btn {
+    background-color: #3c2a1f; /* Mocha background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"].btn:hover {
+    background-color: #2b1c16; /* Darker mocha on hover */
+}
+
+a.option-btn {
+    background-color: #d76d24; /* Orange background */
+    color: #fff; /* White text */
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+a.option-btn:hover {
+    background-color: #c65a20; /* Darker orange on hover */
+}
+
+/* Empty message styles */
+.empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3c2a1f; /* Mocha color */
+}

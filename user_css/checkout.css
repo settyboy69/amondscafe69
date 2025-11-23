@@ -1,0 +1,115 @@
+*{
+    text-transform: capitalize;
+}
+
+.checkout span {
+    font-size: 15px;
+}
+
+.checkout a {
+    margin-bottom: 18px !important;
+}
+
+
+
+.checkout .title{
+    font-size: 50px;
+}
+
+.checkout {
+    padding: 20px; /* Padding around the section */
+    background-color: #FFEBCC; /* Light orange background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Maximum width for the section */
+    margin: 20px auto; /* Center the section */
+}
+
+.checkout .title {
+    text-align: center; /* Center the title */
+    font-size: 34px; /* Font size for the title */
+    color: #FF6F20; /* Orange color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.cart-items h3 {
+    font-size: 24px; /* Font size for cart items heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.cart-items p {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between name and price */
+    padding: 10px 0; /* Padding above and below each item */
+    border-bottom: 1px solid #3d3d3d; /* Bottom border for separation */
+}
+
+.cart-items .empty {
+    text-align: center; /* Center the empty cart message */
+    color: #FF6F20; /* Orange color for the message */
+}
+
+.grand-total {
+    font-weight: bold; /* Bold text for grand total */
+    font-size: 20px; /* Font size for grand total */
+    margin-top: 10px; /* Space above the grand total */
+}
+
+.grand-total .price {
+    color: #FF6F20; /* Orange color for the price */
+}
+
+.btn {
+    display: inline-block; /* Inline block for buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #FF6F20; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    text-align: center; /* Center text in buttons */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Space above buttons */
+}
+
+.btn.disabled {
+    background-color: #ccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+}
+
+.user-info {
+    margin-top: 20px; /* Space above user info section */
+}
+
+.user-info h3 {
+    font-size: 24px; /* Font size for user info heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.user-info p {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 5px 0; /* Space above and below each info item */
+}
+
+.user-info i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.box {
+    width: 100%; /* Full width for select box */
+    padding: 10px; /* Padding for select box */
+    border-radius: 5px; /* Rounded corners for select box */
+    border: 1px solid #ddd; /* Border for select box */
+    margin-top: 10px; /* Space above select box */
+}
+
+input[type="submit"] {
+    width: 100%; /* Full width for submit button */
+    background: var(--red); /* Red background for submit button */
+    color: var(--white); /* White text color for submit button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for submit button */
+    padding: 10px; /* Padding for submit button */
+    cursor: pointer; /* Pointer cursor on hover */
+}

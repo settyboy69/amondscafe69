@@ -1,0 +1,133 @@
+.fa-times{
+    font-size: 15px !important;
+}
+
+.fa-edit, .fa-times{
+    margin-right: 7px;
+}
+
+#Name{
+    padding-right: 50px;
+}
+
+.cartStyle {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 20px;
+    background-color: #FFEBCC; /* Slight orange background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the section with auto margins */
+    max-width: 800px; /* Set a maximum width for the section */
+}
+
+.cartStyle .title {
+    text-align: center;
+    font-size: 28px; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #FF6F20; /* Orange color for the title */
+    text-transform: uppercase; /* Capitalize the title text */
+}
+
+.cartStyle .box-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    width: 100%; /* Full width of the container */
+}
+
+.cartStyle .box img {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-right: 15px; /* Space to the right of the image */
+}
+
+.cartStyle .box {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background-color: #FFFAE3; /* Light yellow background for each cart item */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Position for the delete button */
+}
+
+.cartStyle .box img {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-right: 15px; /* Space to the right of the image */
+}
+
+.cartStyle .details {
+    flex: 1;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+
+.cartStyle .name {
+    font-weight: bold; /* Bold text for product name */
+    text-transform: uppercase; /* Capitalize the product name */
+    margin-bottom: 5px; /* Space below the name */
+}
+
+.cartStyle .flex {
+    display: flex; /* Flexbox for price and quantity */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between price and quantity */
+}
+
+.cartStyle .price {
+    font-size: 18px; /* Font size for price */
+    color: #FF6F20; /* Orange color for price */
+    margin-right: 10px; /* Space to the right of the price */
+}
+
+.cartStyle .qty {
+    width: 60px; /* Fixed width for quantity input */
+    text-align: center;
+    margin-right: 7px; /* Space to the right of the input */
+    margin-left: 7px;
+}
+
+.cartStyle .sub-total {
+    margin-top: 10px; /* Space above the subtotal */
+    font-weight: bold; /* Bold text for subtotal */
+}
+
+
+.cart-total, .more-btn {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the sections */
+    width: 100%; /* Full width of the container */
+}
+
+.cart-total p {
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Font size for cart total */
+    color: #333; /* Dark text color for readability */
+}
+
+.more-btn {
+    margin-top: 10px; /* Space above the more buttons */
+}
+
+.more-btn .btn, .more-btn .delete-btn {
+    margin-left: 10px; /* Space between buttons */
+}
+
+.more-btn .btn.disabled, .more-btn .delete-btn.disabled {
+    background-color: #ccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+}

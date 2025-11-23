@@ -1,0 +1,161 @@
+/* --- Casual Admin/Product Page Design --- */
+
+/* Reset default styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Modern casual font */
+  background-color: #fdf8f4; /* Soft cream background */
+  color: #4b3b35; /* Gentle mocha text */
+}
+
+/* Section Titles */
+h3 {
+  color: #6f4c3e; /* Mocha color */
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  border-left: 5px solid #ff8c5a;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+/* Product Sections */
+.add-products,
+.show-products {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-products:hover,
+.show-products:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Boxes */
+.box {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d8c8c2;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #fffaf8;
+  transition: border-color 0.3s;
+}
+
+.box:focus {
+  border-color: #ff8c5a;
+  outline: none;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  color: #6f4c3e;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #ff8c5a;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #e67a4c;
+  transform: translateY(-2px);
+}
+
+/* Table Layout */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.table_header p {
+  font-size: 1.1em;
+  color: #6f4c3e;
+  font-weight: 600;
+}
+
+.table_header input {
+  padding: 8px 10px;
+  border: 1px solid #d8c8c2;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background-color: #fffaf8;
+}
+
+/* Add New Button */
+.add_new {
+  background-color: #6f4c3e;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.add_new:hover {
+  background-color: #5a3b31;
+}
+
+/* Table Rows */
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+th {
+  background-color: #f8f0eb;
+  color: #6f4c3e;
+  font-weight: 600;
+}
+
+td {
+  border-bottom: 1px solid #f0e4dd;
+}
+
+td img {
+  height: 55px;
+  border-radius: 8px;
+}
+
+/* Empty Message */
+.empty {
+  color: #ff8c5a;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 1em;
+  background-color: #fffaf8;
+  padding: 12px;
+  border-radius: 8px;
+}

@@ -1,0 +1,115 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3e8df; /* Light cream background */
+
+    background-repeat: repeat;
+    color: #4b2e05;
+}
+
+/* Header Section Styles */
+.user-header {
+    background-color: #6f4c3e; /* Mocha brown */
+    color: #f7f2ed;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Playfair Display', serif;
+}
+
+.user-header a {
+    color: #f7f2ed;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.user-header a:hover {
+    color: #e8b279; /* Soft caramel accent */
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #fff8f3;
+    border-radius: 15px;
+    border: 1px solid #e2d3c3;
+    box-shadow: 0 10px 20px rgba(111, 76, 62, 0.2);
+    text-align: center;
+}
+
+.form-container h3 {
+    color: #6f4c3e;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-container .box {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d4b59c;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.form-container .box:focus {
+    border-color: #b5835a;
+    box-shadow: 0 0 10px rgba(181, 131, 90, 0.4);
+    outline: none;
+}
+
+/* Button Styling */
+.form-container .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #b5835a; /* Coffee caramel tone */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background-color: #8b5e3c;
+    transform: scale(1.03);
+}
+
+/* Paragraph and Links */
+.form-container p {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #4b2e05;
+}
+
+.form-container p a {
+    color: #b5835a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+    color: #8b5e3c;
+}
+
+/* Optional: Subtle Decorative Touch */
+.form-container::before {
+ 
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #b5835a;
+}

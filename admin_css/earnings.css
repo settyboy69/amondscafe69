@@ -1,0 +1,77 @@
+/* dashboard_style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background for contrast */
+    color: #4b3c31; /* Mocha color for text */
+    margin: 0;
+    padding: 0;
+}
+
+h1.heading {
+    text-align: center;
+    color: #d95f0e; /* Orange color */
+    margin: 20px 0;
+}
+
+.earnings-history {
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light border */
+}
+
+.table th {
+    background-color: #d95f0e; /* Orange for header */
+    color: white; /* White text for contrast */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.table tr:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.total-price {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #4b3c31; /* Mocha color */
+}
+
+/* Button styles (if you have any buttons) */
+.button {
+    background-color: #d95f0e; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #c75b0e; /* Darker orange on hover */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .table {
+        font-size: 14px; /* Smaller font on mobile */
+    }
+
+    .total-price {
+        font-size: 1.2em; /* Adjust total earnings font size */
+    }
+}

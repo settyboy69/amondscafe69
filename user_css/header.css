@@ -1,0 +1,149 @@
+/* ===========================================
+   HEADER DESIGN — CASUAL & MODERN STYLE
+   =========================================== */
+
+.header {
+  background: linear-gradient(180deg, #fff 80%, #f4ede7 100%);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav,
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+/* LOGO */
+.logo img {
+  height: 45px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* NAV LINKS */
+.navbar a {
+  color: #4b3f33;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b8835a;
+  text-shadow: 0 0 5px rgba(184, 131, 90, 0.3);
+}
+
+/* BUTTONS (ORDERS, CART, LOGOUT) */
+.btn {
+  background-color: #b8835a;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a06b43;
+  box-shadow: 0 3px 8px rgba(160, 107, 67, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: #c45b4a;
+}
+
+.btn-danger:hover {
+  background-color: #a54132;
+}
+
+/* LOGIN BUTTON (different color when logged out) */
+.btn-success {
+  background-color: #6f8b6a;
+}
+
+.btn-success:hover {
+  background-color: #587056;
+}
+
+/* PROFILE SECTION */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.profile .name {
+  color: #b8835a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.profile .name:hover {
+  color: #a06b43;
+}
+
+.profile .flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* TEXT “Good Day” */
+li a,
+li {
+  list-style: none;
+  color: #777;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .left-nav,
+  .right-nav {
+    flex-direction: column;
+  }
+
+  .profile {
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

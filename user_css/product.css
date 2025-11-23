@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6f4c3e; /* Mocha background color */
+  
+}
+
+/* Headings */
+h3 {
+    text-align: center;
+    color: #f2f2f2; /* Light text color */
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+/* Menu Section */
+.menu-section-container {
+    margin-top: 20px;
+    border: 3px solid #ff8c00; /* Orange border for menu section */
+    padding: 10px; /* Padding for spacing */
+}
+
+/* Products */
+.products {
+    margin-bottom: 40px;
+    border: 3px solid #ff8c00; /* Orange border for products */
+    padding: 10px; /* Padding for spacing */
+}
+
+/* Styling for box-products */
+.box-products {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border: 3px solid #333; /* Thick dark border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    margin: 10px; /* Margin for spacing */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.box-products:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.box-products img {
+    max-width: 150px; /* Limit the width */
+    max-height: 150px; /* Limit the height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image to fit the box */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.title {
+    font-size: 24px;
+    color: #ff8c00; /* Orange color */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff8c00; /* Underline title */
+    padding-bottom: 10px;
+}
+
+/* Box Container */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px; /* Padding for spacing */
+}
+
+.box-container .product {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border: 3px solid #e0e0e0; /* Thick border */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center; /* Center text horizontally */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.box-container .product:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.box-container img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.box-container .product h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333; /* Dark text color */
+}
+
+.box-container .product p {
+    font-size: 14px;
+    color: #666; /* Lighter text color for descriptions */
+}
+
+/* Styles for price and quantity */
+.price, .qty {
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Dark text color */
+     margin: 5px ; /* Add some spacing */
+    text-align: center; /* Center text */
+}
+
+/* Additional Styling for Buttons */
+button {
+    background-color: #ff8c00; /* Orange background */
+    color: #f2f2f2; /* Light text color */
+    border: 3px solid #cc7000; /* Darker orange border for buttons */
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #cc7000; /* Darker orange on hover */
+    border-color: #b36200; /* Even darker border on hover */
+}
+
+/* Additional Styles for Links */
+a {
+    color: #ff8c00; /* Orange link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Add a transparent border for hover effect */
+}
+
+a:hover {
+    color: #cc7000; /* Darker orange on hover */
+    text-decoration: underline; /* Underline on hover */
+    border-bottom: 2px solid #cc7000; /* Underline color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #f2f2f2; /* Light text color */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Space above the footer */
+    border-top: 3px solid #ff8c00; /* Orange top border for footer */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column; /* Stack products vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .box-container .product {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .box-products {
+        width: 90%; /* Full width for box-products */
+    }
+
+    /* Adjust button and link styles for smaller screens if needed */
+    button {
+        width: 100%; /* Full width for buttons */
+    }
+}
